@@ -27,6 +27,12 @@ namespace NovaWeb.API.Controllers
             return Ok(_repository.FindById(id));
         }
 
+        [HttpGet("{id}/telefones")]
+        public IActionResult GetTelefonesDoContato(int id)
+        {
+            return Ok(_repository.FindById(id));
+        }
+
         [HttpPost]
         public IActionResult Post(Contato model)
         {

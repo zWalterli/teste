@@ -2,17 +2,10 @@
 
 namespace NovaWeb.API.Model
 {
-    [Table("telefone")]
     public class Telefone
     {
-        [Column("id_telefone")]
-        public int Id { get; set; }
-        /*
-        [Column("id_contato")]
-        public int IdContato { get; set; }
-        */
-        [Column("contato")]
-        public string numero { get; set; }
-
+        public int TelefoneId { get; set; }
+        public int ContatoId { get; set; }
+        public string Numero { get; set; }
     }
 }

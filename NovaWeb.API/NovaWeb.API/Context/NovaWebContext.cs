@@ -9,13 +9,5 @@ namespace NovaWeb.API.Context
         public DbSet<Telefone> Telefones { get; set; }
         public NovaWebContext(DbContextOptions<NovaWebContext> options) :
             base(options) { }
-
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            modelBuilder.Entity<Telefone>()
-                .HasOne<Contato>()
-                .WithMany(a => a.telefones)
-                .HasForeignKey("id_contato");
-        }
     }
 }

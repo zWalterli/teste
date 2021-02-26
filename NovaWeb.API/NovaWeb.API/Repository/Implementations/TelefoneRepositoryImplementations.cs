@@ -8,19 +8,19 @@ using System.Linq;
 
 namespace NovaWeb.API.Repository
 {
-    public class ContatoRepositoryImplementations : IContatoRepository
+    public class TelefoneRepositoryImplementations : ITelefoneRepository
     {
         private readonly NovaWebContext _context;
 
-        public ContatoRepositoryImplementations(NovaWebContext context)
+        public TelefoneRepositoryImplementations(NovaWebContext context)
         {
             _context = context;
         }
-        public Contato Create(Contato model)
+        public Telefone Create(Telefone model)
         {
             try
             {
-                model.ContatoId = FindLastId();
+                model.TelefoneId = FindLastId();
                 _context.Add(model);
                 _context.SaveChanges();
                 return model;
@@ -38,7 +38,7 @@ namespace NovaWeb.API.Repository
             {
                 try
                 {
-                    _context.Contatos.Remove(result);
+                    _context.Telefones.Remove(result);
                     _context.SaveChanges();
                 }
                 catch (Exception)
@@ -48,24 +48,22 @@ namespace NovaWeb.API.Repository
             }
         }
 
-        public List<Contato> FindAll()
+        public List<Telefone> FindAll()
         {
-            var result = _context.Contatos
-                        .Include(c => c.Telefones)
+            var result = _context.Telefones
                         .ToList();          
             return result;
         }
 
-        public Contato FindById(long id)
+        public Telefone FindById(long id)
         {
-            return _context.Contatos
-                    .Include(t => t.Telefones)
-                    .SingleOrDefault(c => c.ContatoId == id);
+            return _context.Telefones
+                    .SingleOrDefault(c => c.TelefoneId == id);
         }
 
-        public Contato Update(Contato model)
+        public Telefone Update(Telefone model)
         {
-            var result = FindById(model.ContatoId);
+            var result = FindById(model.TelefoneId);
             if (result != null)
             {
                 try
@@ -87,13 +85,13 @@ namespace NovaWeb.API.Repository
 
         public int FindLastId()
         {
-            var result = _context.Contatos.ToList();
-            return result.Count == null ? 1 : result[result.Count - 1].ContatoId + 1;
+            var result = _context.Telefones.ToList();
+            return result.Count == null ? 1 : result[result.Count - 1].TelefoneId + 1;
         }
 
         public bool Exists(long id)
         {
-            return _context.Contatos.Any(p => p.ContatoId == id);
+            return _context.Telefones.Any(p => p.TelefoneId == id);
         }
     }
 }
