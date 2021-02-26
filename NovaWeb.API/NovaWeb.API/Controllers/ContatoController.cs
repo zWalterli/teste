@@ -33,14 +33,13 @@ namespace NovaWeb.API.Controllers
             return Ok(_repository.Create(model));
         }
 
-
         [HttpPut]
         public IActionResult Put(Contato model)
         {
             return Ok(_repository.Update(model));
         }
 
-        [HttpDelete("id")]
+        [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
             _repository.Delete(id);

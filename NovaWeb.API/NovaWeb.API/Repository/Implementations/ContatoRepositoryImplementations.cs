@@ -20,6 +20,7 @@ namespace NovaWeb.API.Repository
         {
             try
             {
+                model.Id = FindLastId();
                 _context.Add(model);
                 _context.SaveChanges();
                 return model;
@@ -32,7 +33,7 @@ namespace NovaWeb.API.Repository
 
         public void Delete(long id)
         {
-            var result = _context.Contatos.SingleOrDefault(p => p.Id.Equals(id));
+            var result = FindById(id);
             if (result != null)
             {
                 try
@@ -50,28 +51,21 @@ namespace NovaWeb.API.Repository
         public List<Contato> FindAll()
         {
             var result = _context.Contatos
-                        .ToList();
-            
-            foreach (Contato c in result)
-            {
-                c.telefones = _context.Telefones
-                                .Where(t => t.IdContato.Equals(c.Id))
-                                .ToList();
-            }
-            
+                        .Include(c => c.telefones)
+                        .ToList();          
             return result;
         }
 
         public Contato FindById(long id)
         {
             return _context.Contatos
-                    .Include(c => c.telefones)
-                    .SingleOrDefault(p => p.Id == id);
+                    .Include(t => t.telefones)
+                    .SingleOrDefault(c => c.Id == id);
         }
 
         public Contato Update(Contato model)
         {
-            var result = _context.Contatos.SingleOrDefault(p => p.Id.Equals(model.Id));
+            var result = FindById(model.Id);
             if (result != null)
             {
                 try
@@ -89,6 +83,12 @@ namespace NovaWeb.API.Repository
             {
                 return null;
             }
+        }
+
+        public int FindLastId()
+        {
+            var result = _context.Contatos.ToList();
+            return result.Count == null ? 1 : result[result.Count - 1].Id + 1;
         }
 
         public bool Exists(long id)

@@ -13,16 +13,9 @@ namespace NovaWeb.API.Context
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Telefone>()
-                .HasOne(c => c.contato)
+                .HasOne<Contato>()
                 .WithMany(a => a.telefones)
-                .HasForeignKey("fk_telefone_contato");
-
-            /*
-            modelBuilder.Entity<Contato>()
-                .HasOne(fa => fa.Categorias)
-                .WithMany(a => (IEnumerable<FilmeCategoria>)a.Filmes)
-                .HasForeignKey("category_id");
-            */
+                .HasForeignKey("id_contato");
         }
     }
 }

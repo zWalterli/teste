@@ -18,10 +18,5 @@ namespace NovaWeb.API.Model
         [Column("last_name")]
         public string LastName { get; set; }
         public List<Telefone> telefones { get; set; }
-
-        public Contato()
-        {
-            List<Telefone> telefones = new List<Telefone>();
-        }
     }
 }

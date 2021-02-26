@@ -10,7 +10,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace NovaWeb.API.Migrations
 {
     [DbContext(typeof(NovaWebContext))]
-    [Migration("20210226124920_Inicial")]
+    [Migration("20210226135317_Inicial")]
     partial class Inicial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -24,8 +24,10 @@ namespace NovaWeb.API.Migrations
             modelBuilder.Entity("NovaWeb.API.Model.Contato", b =>
                 {
                     b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("integer")
-                        .HasColumnName("id_contato");
+                        .HasColumnName("id_contato")
+                        .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
 
                     b.Property<string>("Email")
                         .HasColumnType("text")
@@ -52,11 +54,7 @@ namespace NovaWeb.API.Migrations
                         .HasColumnName("id_telefone")
                         .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
 
-                    b.Property<int>("IdContato")
-                        .HasColumnType("integer")
-                        .HasColumnName("id_contato");
-
-                    b.Property<int?>("contatoId")
+                    b.Property<int?>("id_contato")
                         .HasColumnType("integer");
 
                     b.Property<string>("numero")
@@ -65,27 +63,16 @@ namespace NovaWeb.API.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("contatoId");
+                    b.HasIndex("id_contato");
 
                     b.ToTable("telefone");
                 });
 
-            modelBuilder.Entity("NovaWeb.API.Model.Contato", b =>
-                {
-                    b.HasOne("NovaWeb.API.Model.Telefone", null)
-                        .WithMany()
-                        .HasForeignKey("Id")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
             modelBuilder.Entity("NovaWeb.API.Model.Telefone", b =>
                 {
-                    b.HasOne("NovaWeb.API.Model.Contato", "contato")
+                    b.HasOne("NovaWeb.API.Model.Contato", null)
                         .WithMany("telefones")
-                        .HasForeignKey("contatoId");
-
-                    b.Navigation("contato");
+                        .HasForeignKey("id_contato");
                 });
 
             modelBuilder.Entity("NovaWeb.API.Model.Contato", b =>
