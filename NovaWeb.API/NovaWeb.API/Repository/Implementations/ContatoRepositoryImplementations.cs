@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using NovaWeb.API.Context;
-using NovaWeb.API.Model;
+using NovaWeb.Model;
 using RestWithASPNET.Repository;
 using System;
 using System.Collections.Generic;

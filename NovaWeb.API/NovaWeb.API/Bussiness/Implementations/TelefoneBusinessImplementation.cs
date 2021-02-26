@@ -1,4 +1,4 @@
-﻿using NovaWeb.API.Model;
+﻿using NovaWeb.Model;
 using RestWithASPNET.Repository;
 using System.Collections.Generic;
 
@@ -25,7 +25,7 @@ namespace NovaWeb.API.Bussiness.Implementations
 
         public bool Delete(long id)
         {
-            _repository.Delete(id);
+            return _repository.Delete(id);
         }
 
         public List<Telefone> FindAll()

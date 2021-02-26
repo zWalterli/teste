@@ -342,6 +342,16 @@
         "runtime": {
           "lib/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
         }
+      },
+      "NovaWeb.Model/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/NovaWeb.Model.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/NovaWeb.Model.dll": {}
+        }
       }
     }
   },
@@ -1019,12 +1029,18 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "NovaWeb.Model/1.0.0": {
+      "type": "project",
+      "path": "../NovaWeb.Model/NovaWeb.Model.csproj",
+      "msbuildProject": "../NovaWeb.Model/NovaWeb.Model.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
       "Microsoft.AspNetCore.Mvc.Versioning >= 5.0.0",
       "Microsoft.EntityFrameworkCore.Design >= 5.0.3",
+      "NovaWeb.Model >= 1.0.0",
       "Npgsql.EntityFrameworkCore.PostgreSQL >= 5.0.2",
       "Swashbuckle.AspNetCore >= 5.6.3"
     ]
@@ -1055,7 +1071,11 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\walte\\OneDrive\\Área de Trabalho\\Estudos .NET\\NovaWeb.API\\NovaWeb.API\\NovaWeb.Model\\NovaWeb.Model.csproj": {
+              "projectPath": "C:\\Users\\walte\\OneDrive\\Área de Trabalho\\Estudos .NET\\NovaWeb.API\\NovaWeb.API\\NovaWeb.Model\\NovaWeb.Model.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using NovaWeb.API.Bussiness;
-using NovaWeb.API.Model;
+using NovaWeb.Model;
 
 namespace NovaWeb.API.Controllers
 {

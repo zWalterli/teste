@@ -27,6 +27,7 @@
         "dependencies": {
           "Microsoft.AspNetCore.Mvc.Versioning": "5.0.0",
           "Microsoft.EntityFrameworkCore.Design": "5.0.3",
+          "NovaWeb.Model": "1.0.0",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "5.0.2",
           "Swashbuckle.AspNetCore": "5.6.3",
           "Microsoft.AspNetCore.Antiforgery": "5.0.0.0",
@@ -561,6 +562,14 @@
         }
       },
       "System.Runtime.CompilerServices.Unsafe/4.6.0": {},
+      "NovaWeb.Model/1.0.0": {
+        "runtime": {
+          "NovaWeb.Model.dll": {}
+        },
+        "compile": {
+          "NovaWeb.Model.dll": {}
+        }
+      },
       "Microsoft.AspNetCore.Antiforgery/5.0.0.0": {
         "compile": {
           "Microsoft.AspNetCore.Antiforgery.dll": {}
@@ -2457,6 +2466,11 @@
       "sha512": "sha512-HxozeSlipUK7dAroTYwIcGwKDeOVpQnJlpVaOkBz7CM4TsE5b/tKlQBZecTjh6FzcSbxndYaxxpsBMz+wMJeyw==",
       "path": "system.runtime.compilerservices.unsafe/4.6.0",
       "hashPath": "system.runtime.compilerservices.unsafe.4.6.0.nupkg.sha512"
+    },
+    "NovaWeb.Model/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "Microsoft.AspNetCore.Antiforgery/5.0.0.0": {
       "type": "referenceassembly",

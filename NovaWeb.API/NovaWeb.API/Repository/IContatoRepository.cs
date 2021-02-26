@@ -1,4 +1,4 @@
-﻿using NovaWeb.API.Model;
+﻿using NovaWeb.Model;
 using System.Collections.Generic;
 
 namespace RestWithASPNET.Repository

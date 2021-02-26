@@ -1,6 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
-
-namespace NovaWeb.API.Model
+﻿namespace NovaWeb.Model
 {
     public class Telefone
     {

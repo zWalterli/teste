@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using NovaWeb.API.Model;
+using NovaWeb.Model;
 
 namespace NovaWeb.API.Context
 {
