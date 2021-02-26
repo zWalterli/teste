@@ -1,5 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-using NovaWeb.API.Context;
+﻿using NovaWeb.API.Context;
 using NovaWeb.API.Model;
 using RestWithASPNET.Repository;
 using System;
@@ -20,7 +19,7 @@ namespace NovaWeb.API.Repository
         {
             try
             {
-                model.TelefoneId = FindLastId();
+                model.TelefoneId = FindLastIdTelefone(model.ContatoId);
                 _context.Add(model);
                 _context.SaveChanges();
                 return model;
@@ -83,9 +82,16 @@ namespace NovaWeb.API.Repository
             }
         }
 
-        public int FindLastId()
+        public List<Telefone> GetAllTelefonesByIdContato(int id)
         {
-            var result = _context.Telefones.ToList();
+            return _context.Telefones.Where(t => t.ContatoId.Equals(id)).ToList();
+        }
+
+        public int FindLastIdTelefone(int IdContato)
+        {
+            var result = _context.Telefones
+                        .Where(t => t.ContatoId.Equals(IdContato))
+                        .ToList();
             return result.Count == null ? 1 : result[result.Count - 1].TelefoneId + 1;
         }
 

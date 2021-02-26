@@ -1,17 +1,15 @@
 ﻿using NovaWeb.API.Model;
 using System.Collections.Generic;
 
-namespace RestWithASPNET.Repository
+namespace NovaWeb.API.Bussiness
 {
-    public interface ITelefoneRepository
+    public interface ITelefoneBusiness
     {
         Telefone Create(Telefone model);
         Telefone FindById(long id);
         List<Telefone> FindAll();
-        Telefone Update(Telefone model);
         List<Telefone> GetAllTelefonesByIdContato(int id);
+        Telefone Update(Telefone model);
         void Delete(long id);
-        bool Exists(long id);
-        int FindLastIdTelefone(int IdContato);
     }
 }

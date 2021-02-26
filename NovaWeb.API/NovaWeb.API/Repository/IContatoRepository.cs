@@ -11,6 +11,6 @@ namespace RestWithASPNET.Repository
         Contato Update(Contato model);
         void Delete(long id);
         bool Exists(long id);
-        int FindLastId();
+        int FindLastIdContato();
     }
 }

@@ -20,7 +20,7 @@ namespace NovaWeb.API.Repository
         {
             try
             {
-                model.ContatoId = FindLastId();
+                model.ContatoId = FindLastIdContato();
                 _context.Add(model);
                 _context.SaveChanges();
                 return model;
@@ -85,7 +85,7 @@ namespace NovaWeb.API.Repository
             }
         }
 
-        public int FindLastId()
+        public int FindLastIdContato()
         {
             var result = _context.Contatos.ToList();
             return result.Count == null ? 1 : result[result.Count - 1].ContatoId + 1;

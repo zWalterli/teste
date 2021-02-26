@@ -34,6 +34,9 @@ namespace NovaWeb.API
             services.AddScoped<IContatoBusiness, ContatoBusinessImplementation>();
             services.AddScoped<IContatoRepository, ContatoRepositoryImplementations>();
 
+            services.AddScoped<ITelefoneBusiness, TelefoneBusinessImplementation>();
+            services.AddScoped<ITelefoneRepository, TelefoneRepositoryImplementations>();
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "NovaWeb.API", Version = "v1" });
