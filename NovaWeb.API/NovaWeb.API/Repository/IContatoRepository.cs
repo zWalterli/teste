@@ -9,8 +9,7 @@ namespace RestWithASPNET.Repository
         Contato FindById(long id);
         List<Contato> FindAll();
         Contato Update(Contato model);
-        void Delete(long id);
-        bool Exists(long id);
+        bool Delete(long id);
         int FindLastIdContato();
     }
 }

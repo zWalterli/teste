@@ -31,6 +31,8 @@ namespace NovaWeb.API
                         Configuration.GetConnectionString("NovaWebStrings")));
             services.AddControllers();
 
+            services.AddApiVersioning();
+
             services.AddScoped<IContatoBusiness, ContatoBusinessImplementation>();
             services.AddScoped<IContatoRepository, ContatoRepositoryImplementations>();
 

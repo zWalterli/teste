@@ -31,7 +31,7 @@ namespace NovaWeb.API.Repository
             }
         }
 
-        public void Delete(long id)
+        public bool Delete(long id)
         {
             var result = FindById(id);
             if (result != null)
@@ -40,12 +40,14 @@ namespace NovaWeb.API.Repository
                 {
                     _context.Contatos.Remove(result);
                     _context.SaveChanges();
+                    return true;
                 }
                 catch (Exception)
                 {
                     throw;
                 }
             }
+            return false;
         }
 
         public List<Contato> FindAll()
@@ -88,12 +90,7 @@ namespace NovaWeb.API.Repository
         public int FindLastIdContato()
         {
             var result = _context.Contatos.ToList();
-            return result.Count == null ? 1 : result[result.Count - 1].ContatoId + 1;
-        }
-
-        public bool Exists(long id)
-        {
-            return _context.Contatos.Any(p => p.ContatoId == id);
+            return result.Count == 0 ? 1 : result[result.Count - 1].ContatoId + 1;
         }
     }
 }

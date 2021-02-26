@@ -10,6 +10,6 @@ namespace NovaWeb.API.Bussiness
         List<Telefone> FindAll();
         List<Telefone> GetAllTelefonesByIdContato(int id);
         Telefone Update(Telefone model);
-        void Delete(long id);
+        bool Delete(long id);
     }
 }

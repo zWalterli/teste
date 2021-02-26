@@ -9,6 +9,6 @@ namespace NovaWeb.API.Bussiness
         Contato FindById(long id);
         List<Contato> FindAll();
         Contato Update(Contato model);
-        void Delete(long id);
+        bool Delete(long id);
     }
 }

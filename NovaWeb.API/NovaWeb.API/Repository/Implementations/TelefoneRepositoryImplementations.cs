@@ -30,7 +30,7 @@ namespace NovaWeb.API.Repository
             }
         }
 
-        public void Delete(long id)
+        public bool Delete(long id)
         {
             var result = FindById(id);
             if (result != null)
@@ -39,12 +39,14 @@ namespace NovaWeb.API.Repository
                 {
                     _context.Telefones.Remove(result);
                     _context.SaveChanges();
+                    return true;
                 }
                 catch (Exception)
                 {
                     throw;
                 }
             }
+            return false;
         }
 
         public List<Telefone> FindAll()
@@ -93,11 +95,6 @@ namespace NovaWeb.API.Repository
                         .Where(t => t.ContatoId.Equals(IdContato))
                         .ToList();
             return result.Count == null ? 1 : result[result.Count - 1].TelefoneId + 1;
-        }
-
-        public bool Exists(long id)
-        {
-            return _context.Telefones.Any(p => p.TelefoneId == id);
         }
     }
 }

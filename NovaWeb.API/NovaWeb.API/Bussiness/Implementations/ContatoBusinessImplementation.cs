@@ -18,9 +18,9 @@ namespace NovaWeb.API.Bussiness.Implementations
             return _repository.Create(model);
         }
 
-        public void Delete(long id)
+        public bool Delete(long id)
         {
-            _repository.Delete(id);
+            return _repository.Delete(id);
         }
 
         public List<Contato> FindAll()

@@ -4,8 +4,9 @@ using NovaWeb.API.Model;
 
 namespace NovaWeb.API.Controllers
 {
+    [ApiVersion("1")]
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/v{version:apiVersion}/[controller]")]
     public class ContatoController : ControllerBase
     {
         private readonly IContatoBusiness _repositoryContato;
@@ -26,24 +27,42 @@ namespace NovaWeb.API.Controllers
         [HttpGet("{id}")]
         public IActionResult Get(int id)
         {
-            return Ok(_repositoryContato.FindById(id));
+            var contato = _repositoryContato.FindById(id);
+            if (contato == null)
+            {
+                return NotFound();
+            }
+            return Ok(contato);
         }
 
         [HttpGet("{id}/telefone")]
         public IActionResult GetTelefonesDoContato(int id)
         {
-            return Ok(_repositoryTelefone.GetAllTelefonesByIdContato(id));
+            var telefones = _repositoryTelefone.GetAllTelefonesByIdContato(id);
+            if (telefones == null)
+            {
+                return NotFound();
+            }
+            return Ok(telefones);
         }
 
         [HttpPost]
         public IActionResult Post(Contato model)
         {
+            if (model == null)
+            {
+                return BadRequest();
+            }
             return Ok(_repositoryContato.Create(model));
         }
 
         [HttpPut]
         public IActionResult Put(Contato model)
         {
+            if (model == null)
+            {
+                return BadRequest();
+            }
             return Ok(_repositoryContato.Update(model));
         }
 
@@ -51,7 +70,7 @@ namespace NovaWeb.API.Controllers
         public IActionResult Delete(int id)
         {
             _repositoryContato.Delete(id);
-            return Ok();
+            return NoContent();
         }
     }
 }

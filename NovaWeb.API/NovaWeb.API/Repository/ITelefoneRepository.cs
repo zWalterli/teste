@@ -10,8 +10,7 @@ namespace RestWithASPNET.Repository
         List<Telefone> FindAll();
         Telefone Update(Telefone model);
         List<Telefone> GetAllTelefonesByIdContato(int id);
-        void Delete(long id);
-        bool Exists(long id);
+        bool Delete(long id);
         int FindLastIdTelefone(int IdContato);
     }
 }
