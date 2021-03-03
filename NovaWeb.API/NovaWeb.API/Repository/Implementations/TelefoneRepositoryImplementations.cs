@@ -1,11 +1,10 @@
 ﻿using NovaWeb.API.Context;
 using NovaWeb.Model;
-using RestWithASPNET.Repository;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace NovaWeb.API.Repository
+namespace NovaWeb.API.Repository.Implementations
 {
     public class TelefoneRepositoryImplementations : ITelefoneRepository
     {
@@ -15,11 +14,12 @@ namespace NovaWeb.API.Repository
         {
             _context = context;
         }
+
         public Telefone Create(Telefone model)
         {
             try
             {
-                model.TelefoneId = FindLastIdTelefone(model.ContatoId);
+                model.TelefoneId = FindLastIdTelefone();
                 _context.Add(model);
                 _context.SaveChanges();
                 return model;
@@ -30,14 +30,17 @@ namespace NovaWeb.API.Repository
             }
         }
 
-        public bool Delete(long id)
+        public bool DeleteTodosTelefonesDoContato(int idContato)
         {
-            var result = FindById(id);
+            var result = FindAll().Where(t => t.ContatoId == idContato);
             if (result != null)
             {
                 try
                 {
-                    _context.Telefones.Remove(result);
+                    foreach (var item in result)
+                    {
+                        _context.Telefones.Remove(item);
+                    }
                     _context.SaveChanges();
                     return true;
                 }
@@ -56,15 +59,15 @@ namespace NovaWeb.API.Repository
             return result;
         }
 
-        public Telefone FindById(long id)
+        public Telefone FindById(long idTelefone, long idContato)
         {
             return _context.Telefones
-                    .SingleOrDefault(c => c.TelefoneId == id);
+                    .SingleOrDefault(c => c.TelefoneId == idTelefone && c.ContatoId == idContato);
         }
 
         public Telefone Update(Telefone model)
         {
-            var result = FindById(model.TelefoneId);
+            var result = FindById(model.TelefoneId, model.ContatoId);
             if (result != null)
             {
                 try
@@ -89,12 +92,30 @@ namespace NovaWeb.API.Repository
             return _context.Telefones.Where(t => t.ContatoId.Equals(id)).ToList();
         }
 
-        public int FindLastIdTelefone(int IdContato)
+        public int FindLastIdTelefone()
         {
             var result = _context.Telefones
-                        .Where(t => t.ContatoId.Equals(IdContato))
                         .ToList();
-            return result.Count == null ? 1 : result[result.Count - 1].TelefoneId + 1;
+            return result.Count == 0 ? 1 : result[result.Count - 1].TelefoneId + 1;
+        }
+
+        public bool Delete(long IdTelefone, long IdContato)
+        {
+            var result = FindById(IdTelefone, IdContato);
+            if (result != null)
+            {
+                try
+                {
+                    _context.Telefones.Remove(result);
+                    _context.SaveChanges();
+                    return true;
+                }
+                catch (Exception)
+                {
+                    throw;
+                }
+            }
+            return false;
         }
     }
 }

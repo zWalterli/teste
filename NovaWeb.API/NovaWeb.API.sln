@@ -5,7 +5,11 @@ VisualStudioVersion = 16.0.31019.35
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NovaWeb.API", "NovaWeb.API\NovaWeb.API.csproj", "{1727EB91-1023-4C74-9976-C22F69ACC793}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NovaWeb.Model", "NovaWeb.Model\NovaWeb.Model.csproj", "{644D0523-BE85-44E2-ACE2-07606A458011}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NovaWeb.Model", "NovaWeb.Model\NovaWeb.Model.csproj", "{644D0523-BE85-44E2-ACE2-07606A458011}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NovaWeb.Test", "NovaWeb.Test\NovaWeb.Test.csproj", "{07D62904-A0CF-4399-BF46-87557BCDF3DC}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{8C3C265D-7ED3-4464-BE4B-78BEBFA4F5D8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,14 @@ Global
 		{644D0523-BE85-44E2-ACE2-07606A458011}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{644D0523-BE85-44E2-ACE2-07606A458011}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{644D0523-BE85-44E2-ACE2-07606A458011}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07D62904-A0CF-4399-BF46-87557BCDF3DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07D62904-A0CF-4399-BF46-87557BCDF3DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07D62904-A0CF-4399-BF46-87557BCDF3DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07D62904-A0CF-4399-BF46-87557BCDF3DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C3C265D-7ED3-4464-BE4B-78BEBFA4F5D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C3C265D-7ED3-4464-BE4B-78BEBFA4F5D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C3C265D-7ED3-4464-BE4B-78BEBFA4F5D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C3C265D-7ED3-4464-BE4B-78BEBFA4F5D8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

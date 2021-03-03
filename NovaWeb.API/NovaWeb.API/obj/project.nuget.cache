@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "yNFE/1DuZ3PSnFzWFnByxQLm8R8iau+t/wHwIeAYAZkG9idfhqkgoY+SfrUbuNauyfXOHOzpbrlyTU0Lw5Rizg==",
+  "dgSpecHash": "GDzRj9XLiwFtauWgNz9OSViLLGtUNVagwnTg+a880YAnDG1q71aLguN/lZDs5x3vOFRgQZ1f1Anna6dp59hOdA==",
   "success": true,
   "projectFilePath": "C:\\Users\\walte\\OneDrive\\Área de Trabalho\\Estudos .NET\\NovaWeb.API\\NovaWeb.API\\NovaWeb.API\\NovaWeb.API.csproj",
   "expectedPackageFiles": [
@@ -23,6 +23,7 @@
     "C:\\Users\\walte\\.nuget\\packages\\microsoft.extensions.options\\5.0.0\\microsoft.extensions.options.5.0.0.nupkg.sha512",
     "C:\\Users\\walte\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.0\\microsoft.extensions.primitives.5.0.0.nupkg.sha512",
     "C:\\Users\\walte\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\walte\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.10.9\\microsoft.visualstudio.azure.containers.tools.targets.1.10.9.nupkg.sha512",
     "C:\\Users\\walte\\.nuget\\packages\\npgsql\\5.0.2\\npgsql.5.0.2.nupkg.sha512",
     "C:\\Users\\walte\\.nuget\\packages\\npgsql.entityframeworkcore.postgresql\\5.0.2\\npgsql.entityframeworkcore.postgresql.5.0.2.nupkg.sha512",
     "C:\\Users\\walte\\.nuget\\packages\\swashbuckle.aspnetcore\\5.6.3\\swashbuckle.aspnetcore.5.6.3.nupkg.sha512",

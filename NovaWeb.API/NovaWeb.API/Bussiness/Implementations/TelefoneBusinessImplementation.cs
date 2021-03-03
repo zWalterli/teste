@@ -1,6 +1,7 @@
-﻿using NovaWeb.Model;
-using RestWithASPNET.Repository;
+﻿using NovaWeb.API.Repository;
+using NovaWeb.Model;
 using System.Collections.Generic;
+using System.Text.RegularExpressions;
 
 namespace NovaWeb.API.Bussiness.Implementations
 {
@@ -13,6 +14,12 @@ namespace NovaWeb.API.Bussiness.Implementations
             _repository = repository;
         }
 
+        private static string ApenasNumeros(string str)
+        {
+            var apenasDigitos = new Regex(@"[^\d]");
+            return apenasDigitos.Replace(str, "");
+        }
+
         public List<Telefone> GetAllTelefonesByIdContato(int id)
         {
             return _repository.GetAllTelefonesByIdContato(id);
@@ -20,12 +27,19 @@ namespace NovaWeb.API.Bussiness.Implementations
 
         public Telefone Create(Telefone model)
         {
+            // Permitir apenas caracteres numéricos
+            model.Numero = ApenasNumeros(model.Numero);
             return _repository.Create(model);
         }
 
-        public bool Delete(long id)
+        public bool Delete(long IdTelefone, long IdContato)
         {
-            return _repository.Delete(id);
+            if (IdTelefone < 1 && IdContato < 1)
+            {
+                return false;
+            }
+
+            return _repository.Delete(IdTelefone, IdContato);
         }
 
         public List<Telefone> FindAll()
@@ -33,14 +47,29 @@ namespace NovaWeb.API.Bussiness.Implementations
             return _repository.FindAll();
         }
 
-        public Telefone FindById(long id)
+        public Telefone FindById(long IdTelefone, long IdContato)
         {
-            return _repository.FindById(id);
+            if (IdTelefone < 1 && IdContato < 1)
+            {
+                return null;
+            }
+            return _repository.FindById(IdTelefone, IdContato);
         }
 
         public Telefone Update(Telefone model)
         {
+            // Permitir apenas caracteres numéricos
+            if (model.ContatoId == null || model.ContatoId < 0)
+            {
+                return null;
+            }
+            model.Numero = ApenasNumeros(model.Numero);
             return _repository.Update(model);
+        }
+
+        public bool DeleteTodosTelefonesDoContato(int IdContato)
+        {
+            return _repository.DeleteTodosTelefonesDoContato(IdContato);
         }
     }
 }

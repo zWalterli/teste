@@ -1,0 +1,18 @@
+networks:
+  novaweb-networks:
+    driver: bridge
+services:
+  novaweb.api:
+    build:
+      context: C:\Users\walte\OneDrive\Área de Trabalho\Estudos .NET\NovaWeb.API\NovaWeb.API
+      dockerfile: NovaWeb.API/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Production
+    image: novaweb.api
+    networks:
+      novaweb-networks: null
+    ports:
+    - published: 30123
+      target: 80
+    restart: always
+version: '3.4'

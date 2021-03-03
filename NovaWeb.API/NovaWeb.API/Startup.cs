@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Rewrite;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -9,7 +10,8 @@ using NovaWeb.API.Bussiness;
 using NovaWeb.API.Bussiness.Implementations;
 using NovaWeb.API.Context;
 using NovaWeb.API.Repository;
-using RestWithASPNET.Repository;
+using NovaWeb.API.Repository.Implementations;
+using System;
 
 namespace NovaWeb.API
 {
@@ -25,6 +27,12 @@ namespace NovaWeb.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors(options => options.AddDefaultPolicy(builder => {
+                builder.AllowAnyOrigin()
+                .AllowAnyMethod()
+                .AllowAnyHeader();
+            }));
+
             services.AddEntityFrameworkNpgsql()
                 .AddDbContext<NovaWebContext>(
                     options => options.UseNpgsql(
@@ -39,9 +47,19 @@ namespace NovaWeb.API
             services.AddScoped<ITelefoneBusiness, TelefoneBusinessImplementation>();
             services.AddScoped<ITelefoneRepository, TelefoneRepositoryImplementations>();
 
-            services.AddSwaggerGen(c =>
-            {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "NovaWeb.API", Version = "v1" });
+            services.AddSwaggerGen(c => {
+                c.SwaggerDoc("v1",
+                    new OpenApiInfo
+                    {
+                        Title = "NovaWeb.API",
+                        Version = "v1",
+                        Description = "API RESTful developed - 'NovaWeb.API'.",
+                        Contact = new OpenApiContact
+                        {
+                            Name = "Walterli Valadares Junior",
+                            Url = new Uri("https://github.com/zWalterli")
+                        }
+                    });
             });
         }
 
@@ -51,11 +69,21 @@ namespace NovaWeb.API
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "NovaWeb.API v1"));
             }
 
             app.UseRouting();
+
+            app.UseCors();
+
+            app.UseSwagger();
+            app.UseSwaggerUI(c => {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json",
+                                  "NovaWeb.API");
+            });
+
+            var option = new RewriteOptions();
+            option.AddRedirect("^$", "swagger");
+            app.UseRewriter(option);
 
             app.UseAuthorization();
 

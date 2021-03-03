@@ -1,7 +1,7 @@
 ﻿using NovaWeb.Model;
 using System.Collections.Generic;
 
-namespace RestWithASPNET.Repository
+namespace NovaWeb.API.Repository
 {
     public interface IContatoRepository
     {

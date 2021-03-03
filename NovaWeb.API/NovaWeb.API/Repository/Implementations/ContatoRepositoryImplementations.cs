@@ -1,12 +1,11 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using NovaWeb.API.Context;
 using NovaWeb.Model;
-using RestWithASPNET.Repository;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace NovaWeb.API.Repository
+namespace NovaWeb.API.Repository.Implementations
 {
     public class ContatoRepositoryImplementations : IContatoRepository
     {
@@ -68,11 +67,26 @@ namespace NovaWeb.API.Repository
         public Contato Update(Contato model)
         {
             var result = FindById(model.ContatoId);
+            
             if (result != null)
             {
                 try
                 {
                     _context.Entry(result).CurrentValues.SetValues(model);
+                    foreach (var item in model.Telefones)
+                    {
+                        if (item.ContatoId <= 0)
+                        {
+                            item.ContatoId = model.ContatoId;
+                            _context.Add(item);
+                        } else
+                        {
+                            var result_item = _context.Telefones
+                                                      .SingleOrDefault(t => t.TelefoneId
+                                                                        .Equals(item.TelefoneId));
+                            _context.Entry(result_item).CurrentValues.SetValues(item);
+                        }
+                    }
                     _context.SaveChanges();
                     return result;
                 }
