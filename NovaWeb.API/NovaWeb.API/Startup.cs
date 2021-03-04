@@ -51,7 +51,7 @@ namespace NovaWeb.API
                 c.SwaggerDoc("v1",
                     new OpenApiInfo
                     {
-                        Title = "NovaWeb.API",
+                        Title = "REST API NovaWeb.API - Foo Bar",
                         Version = "v1",
                         Description = "API RESTful developed - 'NovaWeb.API'.",
                         Contact = new OpenApiContact
