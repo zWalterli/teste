@@ -33,7 +33,7 @@ jobs:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
         
       - name: Azure WebApp Container - Application Deployment
-        uses: azure/webapps-deploy@2
+        uses: azure/webapps-deploy@v2
         with:
           app-name: zuuh-api-server
           images: ${{ secrets.DOCKER_CONTAINER_REGISTRY }}/${{ secrets.IMAGE_NAME }}:${{github.run_id}}
