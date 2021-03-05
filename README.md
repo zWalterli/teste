@@ -1,5 +1,5 @@
 # NovaWeb.API
-Esta é uma API REST para consultar dados de um Contato com um ou vários telefones.
+Esta é uma API REST para consultar dados de um Contato com um ou vários telefones. 
 
 Tabela de conteúdos
 =================
@@ -8,6 +8,7 @@ Tabela de conteúdos
    * [Tecnologias](#tecnologias)
    * [Instalação](#instalação)
    * [Como usar](#como-usar)
+   * [Aplicação](#aplicação)
    * [Sobre](#autor)
 <!--te-->
 
@@ -158,6 +159,10 @@ A seguir o exemplo de como utilizar esta API:
     Status: 204 No Content
     Connection: close
 
+
+### Aplicação
+
+Para testar a aplicação <a href="https://zuuh-api-server.azurewebsites.net/swagger/index.html">click aqui.</a>
 
 ### Autor
 ---
