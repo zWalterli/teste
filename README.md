@@ -46,7 +46,8 @@ A seguir o exemplo de como utilizar esta API:
 
     http://localhost:5000/swagger/index.html
 
-### Get lista de Contato
+## Get lista de Contato
+
 ## Request
 `GET /Contato/`
     
@@ -59,22 +60,9 @@ A seguir o exemplo de como utilizar esta API:
     transfer-encoding: chunked 
 
     []
-    
-### Criar novo Contato
-## Request
-`POST /Contato/`
 
-    curl -X POST "http://localhost:5000/api/v1/Contato" -H  "accept: text/plain" -H  "Content-Type: application/json" -d "{\"email\":\"teste@gmail.com\",\"firstName\":\"Teste\",\"lastName\":\"de Teste\",\"telefones\":[{\"numero\":\"32999999999\"}]}"
+## Get Contato Específico
 
-### Response
-    access-control-allow-origin: * 
-    content-type: application/json; charset=utf-8 
-    date: Fri05 Mar 2021 19:29:25 GMT 
-    server: Kestrel 
-    transfer-encoding: chunked 
-
-
-### Get Contato Específico
 ## Request
 `GET /Contato/{id}`
     
@@ -104,6 +92,20 @@ A seguir o exemplo de como utilizar esta API:
         }
       ]
     }
+
+## Criar novo Contato
+
+## Request
+`POST /Contato/`
+
+    curl -X POST "http://localhost:5000/api/v1/Contato" -H  "accept: text/plain" -H  "Content-Type: application/json" -d "{\"email\":\"teste@gmail.com\",\"firstName\":\"Teste\",\"lastName\":\"de Teste\",\"telefones\":[{\"numero\":\"32999999999\"}]}"
+
+### Response
+    access-control-allow-origin: * 
+    content-type: application/json; charset=utf-8 
+    date: Fri05 Mar 2021 19:29:25 GMT 
+    server: Kestrel 
+    transfer-encoding: chunked 
 
 
 ## Atualizar dados de um Contato
