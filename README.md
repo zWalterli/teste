@@ -16,6 +16,9 @@ Tabela de conteúdos
 
 - [x] CRUD de Contatos
 - [x] CRUD de Telefone
+- [x] Docker
+- [x] Azure Container Registry
+- [x] GitHub Actions
 - [ ] Autenticação via JWT
 
 ### Tecnologias
