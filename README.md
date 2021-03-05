@@ -4,7 +4,7 @@ Tabela de conteúdos
 =================
 <!--ts-->
    * [Features](#features)
-   * [Tecnologias](#tecnologias)
+   * [Tecnologias](#🛠-tecnologias)
    * [Instalação](#instalaçao)
    * [Como usar](#como-usar)
    * [Sobre](#autor)
