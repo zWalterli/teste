@@ -42,12 +42,6 @@ As seguintes ferramentas foram usadas na construção do projeto:
 ## Execute a API
     dotnet run -p "NovaWeb.API"
 
-### Features
-- [x] CRUD de Contatos
-- [x] CRUD de Telefones
-- [ ] Autenticação via JWT
-
-
 ### Como Usar
 A seguir o exemplo de como utilizar esta API:
 
