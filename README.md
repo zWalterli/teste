@@ -3,10 +3,11 @@
 Tabela de conteúdos
 =================
 <!--ts-->
+   * [Features](#features)
    * [Tecnologias](#tecnologias)
-   * [Instalação](#instalacao)
+   * [Instalação](#instalaçao)
    * [Como usar](#como-usar)
-   * [Sobre](#Sobre)
+   * [Sobre](#autor)
 <!--te-->
 
 ### Features
