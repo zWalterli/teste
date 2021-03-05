@@ -1,4 +1,5 @@
 # NovaWeb.API
+Esta é uma API REST para fornecer dados de um Contato com um ou vários telefones.
 
 Tabela de conteúdos
 =================
