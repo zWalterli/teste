@@ -1,5 +1,5 @@
 # NovaWeb.API
-Esta é uma API REST para consultar dados de um Contato com um ou vários telefones. 
+Esta é uma API REST para consultar/alterar/incluir/deletar dados de Contato. 
 
 Tabela de conteúdos
 =================
