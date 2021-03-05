@@ -23,6 +23,9 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - [ASP.NET Core](https://docs.microsoft.com/pt-br/aspnet/core/?view=aspnetcore-5.0)
 - [C#](https://docs.microsoft.com/pt-br/dotnet/csharp/)
 - [NuGet](https://www.nuget.org/)
+- [GitHub Actions](https://www.docker.com/)
+- [Azure](https://azure.microsoft.com/)
+- [Docker](https://www.docker.com/)
 
 ### Instalação
 
