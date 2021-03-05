@@ -167,7 +167,7 @@ Para testar a aplicação <a href="https://zuuh-api-server.azurewebsites.net/swa
 ### Autor
 ---
 
-<a href="https://www.linkedin.com/in/walterli-valadares-j%C3%BAnior-39807a165/">
+<a href="https://www.linkedin.com/in/walterli-valadares-j%C3%BAnior-39807a165/" target="_blank">
  <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/46723190?s=460&u=9e52942eb8201675f594e1b24eae0afa22f1aef3&v=4" width="200px;" alt=""/>
  <br />
  <sub><b>Walterli Valadares Junior</b></sub></a> <a href="https://www.linkedin.com/in/walterli-valadares-j%C3%BAnior-39807a165/" title="Linkdlin">🚀</a>
