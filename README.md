@@ -4,8 +4,8 @@ Tabela de conteúdos
 =================
 <!--ts-->
    * [Features](#features)
-   * [Tecnologias](#🛠-tecnologias)
-   * [Instalação](#instalaçao)
+   * [Tecnologias](#tecnologias)
+   * [Instalação](#instalação)
    * [Como usar](#como-usar)
    * [Sobre](#autor)
 <!--te-->
@@ -16,7 +16,7 @@ Tabela de conteúdos
 - [x] CRUD de Telefone
 - [ ] Autenticação via JWT
 
-### 🛠 Tecnologias
+### Tecnologias
 As seguintes ferramentas foram usadas na construção do projeto:
 
 - [ASP.NET Core](https://docs.microsoft.com/pt-br/aspnet/core/?view=aspnetcore-5.0)
