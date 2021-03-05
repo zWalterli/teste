@@ -33,7 +33,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
     git clone https://github.com/zWalterli/NovaWeb.API.git
     
 ## Navegue para a pasta baixada
-    cd NovaWeb.API
+    cd NovaWeb.API/NovaWeb.API/
     
 ## Execute a API
     dotnet run -p "NovaWeb.API"
