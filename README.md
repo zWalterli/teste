@@ -36,7 +36,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 ## Clone esse repositório
     git clone https://github.com/zWalterli/NovaWeb.API.git
     
-## Navegue para a pasta baixada
+## Navegue para a pasta
     cd NovaWeb.API/NovaWeb.API/
     
 ## Execute a API
