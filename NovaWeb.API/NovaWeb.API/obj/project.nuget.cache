@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "GDzRj9XLiwFtauWgNz9OSViLLGtUNVagwnTg+a880YAnDG1q71aLguN/lZDs5x3vOFRgQZ1f1Anna6dp59hOdA==",
+  "dgSpecHash": "HFCjM1Pvf1H0I7u3sDCm2sOKMfIN8HildGWoxeUz0LJPzQr8ykhXllW4L0h66duhtZhC7Zf/lKvBE3BQ7wbe/w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\walte\\OneDrive\\Área de Trabalho\\Estudos .NET\\NovaWeb.API\\NovaWeb.API\\NovaWeb.API\\NovaWeb.API.csproj",
+  "projectFilePath": "C:\\Users\\walte\\OneDrive\\Área de Trabalho\\Estudos\\NovaWeb\\NovaWeb.API\\NovaWeb.API\\NovaWeb.API\\NovaWeb.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\walte\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\walte\\.nuget\\packages\\microsoft.aspnetcore.mvc.versioning\\5.0.0\\microsoft.aspnetcore.mvc.versioning.5.0.0.nupkg.sha512",

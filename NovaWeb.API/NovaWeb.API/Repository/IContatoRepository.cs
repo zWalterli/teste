@@ -11,5 +11,6 @@ namespace NovaWeb.API.Repository
         Contato Update(Contato model);
         bool Delete(long id);
         int FindLastIdContato();
+        List<Contato> FindByName(string firtsName, string lastName);
     }
 }

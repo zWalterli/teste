@@ -2,6 +2,7 @@
 using NovaWeb.API.Bussiness;
 using NovaWeb.Model;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace NovaWeb.API.Controllers
 {
@@ -21,7 +22,7 @@ namespace NovaWeb.API.Controllers
 
         [HttpGet]
         [ProducesResponseType(200, Type = typeof(List<Contato>))]
-        public IActionResult Get()
+        public async Task<IActionResult> Get()
         {
             return Ok(_repositoryContato.FindAll());
         }
@@ -29,9 +30,22 @@ namespace NovaWeb.API.Controllers
         [HttpGet("{id}")]
         [ProducesResponseType(200, Type = typeof(Contato))]
         [ProducesResponseType(404)]
-        public IActionResult Get(int id)
+        public async Task<IActionResult> Get(int id)
         {
             var contato = _repositoryContato.FindById(id);
+            if (contato == null)
+            {
+                return NotFound();
+            }
+            return Ok(contato);
+        }        
+        
+        [HttpGet("findContatoByName")]
+        [ProducesResponseType(200, Type = typeof(Contato))]
+        [ProducesResponseType(404)]
+        public async Task<IActionResult> Get([FromQuery] string firstName, [FromQuery]  string lastName)
+        {
+            var contato = _repositoryContato.FindByName( firstName, lastName);
             if (contato == null)
             {
                 return NotFound();
@@ -42,7 +56,7 @@ namespace NovaWeb.API.Controllers
         [HttpPost]
         [ProducesResponseType(200, Type = typeof(Contato))]
         [ProducesResponseType(400)]
-        public IActionResult Post(Contato model)
+        public async Task<IActionResult> Post(Contato model)
         {
             if (model == null)
             {
@@ -54,7 +68,7 @@ namespace NovaWeb.API.Controllers
         [HttpPut]
         [ProducesResponseType(200, Type = typeof(Contato))]
         [ProducesResponseType(400)]
-        public IActionResult Put(Contato model)
+        public async Task<IActionResult> Put(Contato model)
         {
             if (model == null)
             {
@@ -65,7 +79,7 @@ namespace NovaWeb.API.Controllers
 
         [HttpDelete("{id}")]
         [ProducesResponseType(204)]
-        public IActionResult Delete(int id)
+        public async Task<IActionResult> Delete(int id)
         {
             _repositoryContato.Delete(id);
             return NoContent();
@@ -74,7 +88,7 @@ namespace NovaWeb.API.Controllers
         [HttpGet("{id}/telefone")]
         [ProducesResponseType(200, Type = typeof(List<Contato>))]
         [ProducesResponseType(404)]
-        public IActionResult GetTelefonesDoContato(int id)
+        public async Task<IActionResult> GetTelefonesDoContato(int id)
         {
             var telefones = _repositoryTelefone.GetAllTelefonesByIdContato(id);
             if (telefones == null)
@@ -86,7 +100,7 @@ namespace NovaWeb.API.Controllers
 
         [HttpDelete("{idContato}/telefone/{IdTelefone}/")]
         [ProducesResponseType(204)]
-        public IActionResult DeleteTelefoneDoContato(int IdContato, int IdTelefone)
+        public async Task<IActionResult> DeleteTelefoneDoContato(int IdContato, int IdTelefone)
         {
             _repositoryTelefone.Delete(IdTelefone, IdContato);
             return NoContent();
@@ -94,7 +108,7 @@ namespace NovaWeb.API.Controllers
 
         [HttpDelete("{id}/telefone/")]
         [ProducesResponseType(204)]
-        public IActionResult DeleteTelefoneDoContato(int IdContato)
+        public async Task<IActionResult> DeleteTelefoneDoContato(int IdContato)
         {
             _repositoryTelefone.DeleteTodosTelefonesDoContato(IdContato);
             return NoContent();
@@ -103,7 +117,7 @@ namespace NovaWeb.API.Controllers
         [HttpPost("{id}/telefone/")]
         [ProducesResponseType(200, Type = typeof(List<Contato>))]
         [ProducesResponseType(404)]
-        public IActionResult PostTelefones(List<Telefone> model)
+        public async Task<IActionResult> PostTelefones(List<Telefone> model)
         {
             int x = 0;
             foreach (var item in model)
@@ -122,7 +136,7 @@ namespace NovaWeb.API.Controllers
         [HttpPut("{id}/telefone/")]
         [ProducesResponseType(200, Type = typeof(List<Contato>))]
         [ProducesResponseType(404)]
-        public IActionResult PutTelefones(List<Telefone> model)
+        public async Task<IActionResult> PutTelefones(List<Telefone> model)
         {
             foreach (var item in model)
             {

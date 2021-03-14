@@ -5670,11 +5670,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\walte\\OneDrive\\Área de Trabalho\\Estudos .NET\\NovaWeb.API\\NovaWeb.API\\NovaWeb.Test\\NovaWeb.Test.csproj",
+      "projectUniqueName": "C:\\Users\\walte\\OneDrive\\Área de Trabalho\\Estudos\\NovaWeb\\NovaWeb.API\\NovaWeb.API\\NovaWeb.Test\\NovaWeb.Test.csproj",
       "projectName": "NovaWeb.Test",
-      "projectPath": "C:\\Users\\walte\\OneDrive\\Área de Trabalho\\Estudos .NET\\NovaWeb.API\\NovaWeb.API\\NovaWeb.Test\\NovaWeb.Test.csproj",
+      "projectPath": "C:\\Users\\walte\\OneDrive\\Área de Trabalho\\Estudos\\NovaWeb\\NovaWeb.API\\NovaWeb.API\\NovaWeb.Test\\NovaWeb.Test.csproj",
       "packagesPath": "C:\\Users\\walte\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\walte\\OneDrive\\Área de Trabalho\\Estudos .NET\\NovaWeb.API\\NovaWeb.API\\NovaWeb.Test\\obj\\",
+      "outputPath": "C:\\Users\\walte\\OneDrive\\Área de Trabalho\\Estudos\\NovaWeb\\NovaWeb.API\\NovaWeb.API\\NovaWeb.Test\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\walte\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -5691,8 +5691,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\walte\\OneDrive\\Área de Trabalho\\Estudos .NET\\NovaWeb.API\\NovaWeb.API\\NovaWeb.Model\\NovaWeb.Model.csproj": {
-              "projectPath": "C:\\Users\\walte\\OneDrive\\Área de Trabalho\\Estudos .NET\\NovaWeb.API\\NovaWeb.API\\NovaWeb.Model\\NovaWeb.Model.csproj"
+            "C:\\Users\\walte\\OneDrive\\Área de Trabalho\\Estudos\\NovaWeb\\NovaWeb.API\\NovaWeb.API\\NovaWeb.Model\\NovaWeb.Model.csproj": {
+              "projectPath": "C:\\Users\\walte\\OneDrive\\Área de Trabalho\\Estudos\\NovaWeb\\NovaWeb.API\\NovaWeb.API\\NovaWeb.Model\\NovaWeb.Model.csproj"
             }
           }
         }

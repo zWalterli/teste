@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\walte\\OneDrive\\Área de Trabalho\\Estudos .NET\\NovaWeb.API\\NovaWeb.API\\NovaWeb.Model\\NovaWeb.Model.csproj": {}
+    "C:\\Users\\walte\\OneDrive\\Área de Trabalho\\Estudos\\NovaWeb\\NovaWeb.API\\NovaWeb.API\\NovaWeb.Model\\NovaWeb.Model.csproj": {}
   },
   "projects": {
-    "C:\\Users\\walte\\OneDrive\\Área de Trabalho\\Estudos .NET\\NovaWeb.API\\NovaWeb.API\\NovaWeb.Model\\NovaWeb.Model.csproj": {
+    "C:\\Users\\walte\\OneDrive\\Área de Trabalho\\Estudos\\NovaWeb\\NovaWeb.API\\NovaWeb.API\\NovaWeb.Model\\NovaWeb.Model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\walte\\OneDrive\\Área de Trabalho\\Estudos .NET\\NovaWeb.API\\NovaWeb.API\\NovaWeb.Model\\NovaWeb.Model.csproj",
+        "projectUniqueName": "C:\\Users\\walte\\OneDrive\\Área de Trabalho\\Estudos\\NovaWeb\\NovaWeb.API\\NovaWeb.API\\NovaWeb.Model\\NovaWeb.Model.csproj",
         "projectName": "NovaWeb.Model",
-        "projectPath": "C:\\Users\\walte\\OneDrive\\Área de Trabalho\\Estudos .NET\\NovaWeb.API\\NovaWeb.API\\NovaWeb.Model\\NovaWeb.Model.csproj",
+        "projectPath": "C:\\Users\\walte\\OneDrive\\Área de Trabalho\\Estudos\\NovaWeb\\NovaWeb.API\\NovaWeb.API\\NovaWeb.Model\\NovaWeb.Model.csproj",
         "packagesPath": "C:\\Users\\walte\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\walte\\OneDrive\\Área de Trabalho\\Estudos .NET\\NovaWeb.API\\NovaWeb.API\\NovaWeb.Model\\obj\\",
+        "outputPath": "C:\\Users\\walte\\OneDrive\\Área de Trabalho\\Estudos\\NovaWeb\\NovaWeb.API\\NovaWeb.API\\NovaWeb.Model\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\walte\\AppData\\Roaming\\NuGet\\NuGet.Config",

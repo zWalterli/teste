@@ -106,5 +106,30 @@ namespace NovaWeb.API.Repository.Implementations
             var result = _context.Contatos.ToList();
             return result.Count == 0 ? 1 : result[result.Count - 1].ContatoId + 1;
         }
+
+        public List<Contato> FindByName(string firtsName, string lastName)
+        {
+            
+            if (!string.IsNullOrWhiteSpace(firtsName) && !string.IsNullOrWhiteSpace(lastName))
+            {
+                return _context.Contatos.Where(
+                c => c.FirstName.Contains(firtsName)
+                     && c.LastName.Contains(lastName)).Include(c => c.Telefones).ToList();
+            }
+            else if (string.IsNullOrWhiteSpace(firtsName) && !string.IsNullOrWhiteSpace(lastName))
+            {
+                return _context.Contatos.Where(
+                c => c.LastName.Contains(lastName)).Include(c => c.Telefones).ToList();
+            }
+            else if (!string.IsNullOrWhiteSpace(firtsName) && string.IsNullOrWhiteSpace(lastName))
+            {
+                return _context.Contatos.Where(
+                c => c.FirstName.Contains(firtsName)).Include(c => c.Telefones).ToList();
+            }
+            else
+            {
+                return null;
+            }
+        }
     }
 }

@@ -53,6 +53,11 @@ namespace NovaWeb.API.Bussiness.Implementations
             return _repository.FindById(id);
         }
 
+        public List<Contato> FindByName(string firtsName, string lastName)
+        {
+            return _repository.FindByName( firtsName, lastName);
+        }
+
         public Contato Update(Contato model)
         {
             // Permitir apenas caracteres numéricos

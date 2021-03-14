@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "hsvzhD6q3mdp+h43NikW/BAppQwqijKOW0YvEmuEw5m5eYiMz04syvAgiHdjxMGd6hL9DMGMm9cyvGrS+WQz7A==",
+  "dgSpecHash": "Y6o+t64d0znqJxqB6tz6EfOR3bjlQViBBhe9WOR+JX5+5hzHPtaD/e+Bmn5H8v0Lw98ZwPdqD/Ix6M12pFEc0Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\walte\\OneDrive\\Área de Trabalho\\Estudos .NET\\NovaWeb.API\\NovaWeb.API\\NovaWeb.Test\\NovaWeb.Test.csproj",
+  "projectFilePath": "C:\\Users\\walte\\OneDrive\\Área de Trabalho\\Estudos\\NovaWeb\\NovaWeb.API\\NovaWeb.API\\NovaWeb.Test\\NovaWeb.Test.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\walte\\.nuget\\packages\\coverlet.collector\\1.3.0\\coverlet.collector.1.3.0.nupkg.sha512",
     "C:\\Users\\walte\\.nuget\\packages\\expectedobjects\\3.5.3\\expectedobjects.3.5.3.nupkg.sha512",

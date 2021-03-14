@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "4RGRFRCMqEtu24paLCX+2eQBmlFjnFyevQO2LgTMb2Ttfx7CTOXjUmaVo2Ep3d1rjtEP72ewTQseYIBTIOKYHw==",
+  "dgSpecHash": "ca7IOeq+BAXYlaeXDqXGfLkqt7/3xat9qPijB48Pj07fWPwmS1hduIic3dNOpzjfX+l7BFdqankPmlK7v3HZ7Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\walte\\OneDrive\\Área de Trabalho\\Estudos .NET\\NovaWeb.API\\NovaWeb.API\\NovaWeb.Model\\NovaWeb.Model.csproj",
+  "projectFilePath": "C:\\Users\\walte\\OneDrive\\Área de Trabalho\\Estudos\\NovaWeb\\NovaWeb.API\\NovaWeb.API\\NovaWeb.Model\\NovaWeb.Model.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\walte\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\walte\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
