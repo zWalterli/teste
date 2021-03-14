@@ -4,7 +4,7 @@ networks:
 services:
   novaweb.api:
     build:
-      context: C:\Users\walte\OneDrive\┴rea de Trabalho\Estudos .NET\NovaWeb\NovaWeb.API\NovaWeb.API
+      context: C:\Users\walte\OneDrive\┴rea de Trabalho\Estudos\NovaWeb\NovaWeb.API\NovaWeb.API
       dockerfile: NovaWeb.API/Dockerfile
     environment:
       ASPNETCORE_ENVIRONMENT: Production
