@@ -162,3 +162,13 @@ C:\Users\walte\OneDrive\Área de Trabalho\Estudos\NovaWeb\NovaWeb.API\NovaWeb.AP
 C:\Users\walte\OneDrive\Área de Trabalho\Estudos\NovaWeb\NovaWeb.API\NovaWeb.API\NovaWeb.API\obj\Debug\net5.0\ref\NovaWeb.API.dll
 C:\Users\walte\OneDrive\Área de Trabalho\Estudos\NovaWeb\NovaWeb.API\NovaWeb.API\NovaWeb.API\obj\Debug\net5.0\NovaWeb.API.pdb
 C:\Users\walte\OneDrive\Área de Trabalho\Estudos\NovaWeb\NovaWeb.API\NovaWeb.API\NovaWeb.API\obj\Debug\net5.0\NovaWeb.API.genruntimeconfig.cache
+C:\Users\walte\OneDrive\Área de Trabalho\Estudos\NovaWeb\NovaWeb.API\NovaWeb.API\NovaWeb.API\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\walte\OneDrive\Área de Trabalho\Estudos\NovaWeb\NovaWeb.API\NovaWeb.API\NovaWeb.API\bin\Debug\net5.0\Microsoft.DotNet.PlatformAbstractions.dll
+C:\Users\walte\OneDrive\Área de Trabalho\Estudos\NovaWeb\NovaWeb.API\NovaWeb.API\NovaWeb.API\bin\Debug\net5.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\walte\OneDrive\Área de Trabalho\Estudos\NovaWeb\NovaWeb.API\NovaWeb.API\NovaWeb.API\bin\Debug\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\walte\OneDrive\Área de Trabalho\Estudos\NovaWeb\NovaWeb.API\NovaWeb.API\NovaWeb.API\bin\Debug\net5.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\walte\OneDrive\Área de Trabalho\Estudos\NovaWeb\NovaWeb.API\NovaWeb.API\NovaWeb.API\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\walte\OneDrive\Área de Trabalho\Estudos\NovaWeb\NovaWeb.API\NovaWeb.API\NovaWeb.API\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\walte\OneDrive\Área de Trabalho\Estudos\NovaWeb\NovaWeb.API\NovaWeb.API\NovaWeb.API\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\walte\OneDrive\Área de Trabalho\Estudos\NovaWeb\NovaWeb.API\NovaWeb.API\NovaWeb.API\bin\Debug\net5.0\Newtonsoft.Json.dll
+C:\Users\walte\OneDrive\Área de Trabalho\Estudos\NovaWeb\NovaWeb.API\NovaWeb.API\NovaWeb.API\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll

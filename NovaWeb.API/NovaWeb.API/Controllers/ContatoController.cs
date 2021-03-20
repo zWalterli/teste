@@ -20,11 +20,15 @@ namespace NovaWeb.API.Controllers
             _repositoryTelefone = repositoryTelefone;
         }
 
-        [HttpGet]
+        [HttpGet("{sortDirection}/{pageSize}/{page}")]
         [ProducesResponseType(200, Type = typeof(List<Contato>))]
-        public async Task<IActionResult> Get()
+        public IActionResult Get(
+            [FromQuery] string name,
+            string sortDirection,
+            int pageSize,
+            int page)
         {
-            return Ok(_repositoryContato.FindAll());
+            return Ok(_repositoryContato.findWithPagedSearch(name, sortDirection, pageSize, page));
         }
 
         [HttpGet("{id}")]

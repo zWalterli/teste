@@ -28,9 +28,9 @@ C:\Users\walte\OneDrive\Área de Trabalho\Estudos .NET\NovaWeb\NovaWeb.API\NovaW
 C:\Users\walte\OneDrive\Área de Trabalho\Estudos\NovaWeb\NovaWeb.API\NovaWeb.API\NovaWeb.Model\bin\Debug\netstandard2.0\NovaWeb.Model.deps.json
 C:\Users\walte\OneDrive\Área de Trabalho\Estudos\NovaWeb\NovaWeb.API\NovaWeb.API\NovaWeb.Model\bin\Debug\netstandard2.0\NovaWeb.Model.dll
 C:\Users\walte\OneDrive\Área de Trabalho\Estudos\NovaWeb\NovaWeb.API\NovaWeb.API\NovaWeb.Model\bin\Debug\netstandard2.0\NovaWeb.Model.pdb
-C:\Users\walte\OneDrive\Área de Trabalho\Estudos\NovaWeb\NovaWeb.API\NovaWeb.API\NovaWeb.Model\obj\Debug\netstandard2.0\NovaWeb.Model.csprojAssemblyReference.cache
 C:\Users\walte\OneDrive\Área de Trabalho\Estudos\NovaWeb\NovaWeb.API\NovaWeb.API\NovaWeb.Model\obj\Debug\netstandard2.0\NovaWeb.Model.AssemblyInfoInputs.cache
 C:\Users\walte\OneDrive\Área de Trabalho\Estudos\NovaWeb\NovaWeb.API\NovaWeb.API\NovaWeb.Model\obj\Debug\netstandard2.0\NovaWeb.Model.AssemblyInfo.cs
 C:\Users\walte\OneDrive\Área de Trabalho\Estudos\NovaWeb\NovaWeb.API\NovaWeb.API\NovaWeb.Model\obj\Debug\netstandard2.0\NovaWeb.Model.csproj.CoreCompileInputs.cache
 C:\Users\walte\OneDrive\Área de Trabalho\Estudos\NovaWeb\NovaWeb.API\NovaWeb.API\NovaWeb.Model\obj\Debug\netstandard2.0\NovaWeb.Model.dll
 C:\Users\walte\OneDrive\Área de Trabalho\Estudos\NovaWeb\NovaWeb.API\NovaWeb.API\NovaWeb.Model\obj\Debug\netstandard2.0\NovaWeb.Model.pdb
+C:\Users\walte\OneDrive\Área de Trabalho\Estudos\NovaWeb\NovaWeb.API\NovaWeb.API\NovaWeb.Model\obj\Debug\netstandard2.0\NovaWeb.Model.csprojAssemblyReference.cache

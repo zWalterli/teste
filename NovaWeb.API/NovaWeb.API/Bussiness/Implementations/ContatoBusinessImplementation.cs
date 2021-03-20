@@ -1,4 +1,5 @@
 ﻿using NovaWeb.API.Repository;
+using NovaWeb.API.Util;
 using NovaWeb.Model;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
@@ -56,6 +57,29 @@ namespace NovaWeb.API.Bussiness.Implementations
         public List<Contato> FindByName(string firtsName, string lastName)
         {
             return _repository.FindByName( firtsName, lastName);
+        }
+
+        public PagedSearch<Contato> findWithPagedSearch(
+            string name, string sortDirection, int pageSize, int page)
+        {
+            if (!string.IsNullOrWhiteSpace(name))
+            {
+                name = name.ToUpper();
+            }
+            sortDirection = sortDirection.ToLower();
+            var sort = (!string.IsNullOrWhiteSpace(sortDirection) && !sortDirection.Equals("desc") ) ? "asc" : "desc";
+            var size = (pageSize < 1) ? 10 : pageSize;
+
+            var contatos = _repository.FindWithPagedSearch( name, sortDirection, pageSize, page);
+            int totalResults = _repository.GetCount(name);
+            
+            return new PagedSearch<Contato> {
+                CurrentPage = page,
+                List = contatos,
+                PageSize = size,
+                SortDirections = sort,
+                TotalResults = totalResults
+            };
         }
 
         public Contato Update(Contato model)
