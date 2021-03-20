@@ -131,5 +131,57 @@ namespace NovaWeb.API.Repository.Implementations
                 return null;
             }
         }
+
+        public List<Contato> FindWithPagedSearch(string name, string sortDirection, int pageSize, int page)
+        {
+            List<Contato> contatos = new List<Contato>();
+
+            if (string.IsNullOrWhiteSpace(name))
+            {
+                contatos = _context.Contatos
+                            .Include(c => c.Telefones)
+                            .ToList();
+            } else
+            {
+                contatos = _context.Contatos
+                            .Include(c => c.Telefones)
+                            .Where(c => c.LastName.ToUpper().Contains(name) 
+                                   || c.FirstName.ToUpper().Contains(name) 
+                                   || c.Email.ToUpper().Contains(name))
+                            .ToList();
+            }
+
+            if ( sortDirection.Equals("asc") )
+            {
+                contatos.OrderBy( c => c);
+            }
+            else
+            {
+                contatos.OrderByDescending(c => c);
+            }
+
+            return contatos.Skip(pageSize * (page - 1)).Take(pageSize).ToList(); ;
+        }
+
+        public int GetCount(string name)
+        {
+            int qntContatos; 
+
+            if ( string.IsNullOrWhiteSpace(name) )
+            {
+                qntContatos = _context.Contatos.ToList().Count();
+            }
+            else
+            {
+                qntContatos = _context.Contatos
+                    .Where(c => c.LastName.ToUpper().Contains(name) 
+                           || c.FirstName.ToUpper().Contains(name) 
+                           || c.Email.ToUpper().Contains(name))
+                    .ToList()
+                    .Count();
+            }
+
+            return qntContatos;
+        }
     }
 }

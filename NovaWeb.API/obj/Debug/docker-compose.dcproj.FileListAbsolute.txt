@@ -1,2 +1,3 @@
 C:\Users\walte\OneDrive\Área de Trabalho\Estudos .NET\NovaWeb.API\NovaWeb.API\obj\Debug\docker-compose.dcproj.CoreCompileInputs.cache
 C:\Users\walte\OneDrive\Área de Trabalho\Estudos .NET\NovaWeb.API\NovaWeb.API\NovaWeb.API\obj\Debug\docker-compose.dcproj.CoreCompileInputs.cache
+C:\Users\walte\OneDrive\Área de Trabalho\Estudos\NovaWeb\NovaWeb.API\NovaWeb.API\obj\Debug\docker-compose.dcproj.CoreCompileInputs.cache

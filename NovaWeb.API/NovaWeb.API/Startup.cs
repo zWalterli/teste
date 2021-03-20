@@ -33,10 +33,20 @@ namespace NovaWeb.API
                 .AllowAnyHeader();
             }));
 
+            /*
+             * Base de Dados Postgre
+             * Site: elephantsql.com
+            */
+            /*
             services.AddEntityFrameworkNpgsql()
                 .AddDbContext<NovaWebContext>(
                     options => options.UseNpgsql(
                         Configuration.GetConnectionString("NovaWebStrings")));
+            */
+            
+            services.AddDbContext<NovaWebContext>(options =>
+                options.UseNpgsql(Configuration.GetConnectionString("NovaWebStrings")));
+            
             services.AddControllers();
 
             services.AddApiVersioning();
