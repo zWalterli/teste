@@ -8,7 +8,6 @@ Tabela de conteúdos
    * [Tecnologias](#tecnologias)
    * [Instalação](#instalação)
    * [Como usar](#como-usar)
-   * [Aplicação](#aplicação)
    * [Sobre](#autor)
 <!--te-->
 
@@ -155,11 +154,6 @@ A seguir o exemplo de como utilizar esta API:
     Date: Thu, 24 Feb 2011 12:36:32 GMT
     Status: 204 No Content
     Connection: close
-
-
-### Aplicação
-
-Para testar a aplicação <a href="https://zuuh-api-server.azurewebsites.net/swagger/index.html">click aqui.</a>
 
 ### Autor
 ---
